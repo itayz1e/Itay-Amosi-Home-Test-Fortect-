@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Results from './pages/Results';
 
@@ -7,6 +7,9 @@ import Results from './pages/Results';
 const App: React.FC = () => {
   return (
     <Router>
+            <nav>
+        <Link to="/">Home</Link> | <Link to="/results">Results</Link>
+      </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/results" element={<Results />} />
@@ -15,4 +18,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default App;
